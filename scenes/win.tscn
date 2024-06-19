@@ -1,0 +1,152 @@
+[gd_scene load_steps=9 format=3 uid="uid://cqldoiketqa20"]
+
+[ext_resource type="Script" path="res://scripts/win.cs" id="1_gn8tf"]
+[ext_resource type="AudioStream" uid="uid://i3880gcr3wuo" path="res://assets/music/The Secret Lab.ogg" id="2_n3kr2"]
+[ext_resource type="Texture2D" uid="uid://c01gidbe6trmc" path="res://assets/Forest.jpg" id="2_pnkql"]
+[ext_resource type="AudioStream" uid="uid://bef7nf77f5h4u" path="res://assets/music/button-198922.wav" id="3_ci2lf"]
+[ext_resource type="PackedScene" uid="uid://bfibj2qbrekva" path="res://scenes/options_menu.tscn" id="3_gwqh2"]
+[ext_resource type="AudioStream" uid="uid://bbi6p46lfpr5j" path="res://assets/music/switch-150130.wav" id="4_j0kti"]
+
+[sub_resource type="FontFile" id="FontFile_ugfcv"]
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/5/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/50/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/70/0 = Vector2(0, 0)
+cache/0/5/0/ascent = 0.0
+cache/0/5/0/descent = 0.0
+cache/0/5/0/underline_position = 0.0
+cache/0/5/0/underline_thickness = 0.0
+cache/0/5/0/scale = 1.0
+cache/0/5/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/5/0/kerning_overrides/5/0 = Vector2(0, 0)
+cache/0/5/0/kerning_overrides/50/0 = Vector2(0, 0)
+cache/0/5/0/kerning_overrides/70/0 = Vector2(0, 0)
+cache/0/50/0/ascent = 0.0
+cache/0/50/0/descent = 0.0
+cache/0/50/0/underline_position = 0.0
+cache/0/50/0/underline_thickness = 0.0
+cache/0/50/0/scale = 1.0
+cache/0/50/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/50/0/kerning_overrides/5/0 = Vector2(0, 0)
+cache/0/50/0/kerning_overrides/50/0 = Vector2(0, 0)
+cache/0/50/0/kerning_overrides/70/0 = Vector2(0, 0)
+cache/0/70/0/ascent = 0.0
+cache/0/70/0/descent = 0.0
+cache/0/70/0/underline_position = 0.0
+cache/0/70/0/underline_thickness = 0.0
+cache/0/70/0/scale = 1.0
+cache/0/70/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/70/0/kerning_overrides/5/0 = Vector2(0, 0)
+cache/0/70/0/kerning_overrides/50/0 = Vector2(0, 0)
+cache/0/70/0/kerning_overrides/70/0 = Vector2(0, 0)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3tngg"]
+content_margin_left = 5.0
+content_margin_top = 5.0
+content_margin_right = 5.0
+content_margin_bottom = 5.0
+
+[node name="Win" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_gn8tf")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -1.0
+offset_right = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_pnkql")
+expand_mode = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 20.0
+offset_top = -98.0
+offset_right = 244.0
+offset_bottom = -32.0
+grow_vertical = 0
+
+[node name="StartButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+focus_neighbor_top = NodePath("../QuitButton")
+text = "New Game"
+
+[node name="OptionsButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Menu"
+
+[node name="QuitButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+focus_neighbor_bottom = NodePath("../StartButton")
+text = "QUIT"
+
+[node name="Options_Menu" parent="." instance=ExtResource("3_gwqh2")]
+visible = false
+layout_mode = 1
+
+[node name="MusicStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_n3kr2")
+volume_db = -8.771
+autoplay = true
+bus = &"Music"
+
+[node name="HitSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_ci2lf")
+bus = &"Sfx"
+
+[node name="ButtonPressedStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_j0kti")
+bus = &"Sfx"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 250.0
+offset_top = 155.0
+offset_right = 914.0
+offset_bottom = 259.0
+theme_override_colors/font_color = Color(0.763809, 0.763809, 0.763808, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.771225, 0.279418, 0.909685, 1)
+theme_override_fonts/font = SubResource("FontFile_ugfcv")
+theme_override_font_sizes/font_size = 70
+theme_override_styles/normal = SubResource("StyleBoxEmpty_3tngg")
+text = "CONGRATULATIONS!"
+
+[node name="wait" type="Label" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 492.0
+offset_top = 228.0
+offset_right = 1156.0
+offset_bottom = 332.0
+theme_override_colors/font_color = Color(0.763809, 0.763809, 0.763808, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.771225, 0.279418, 0.909685, 1)
+theme_override_fonts/font = SubResource("FontFile_ugfcv")
+theme_override_font_sizes/font_size = 70
+theme_override_styles/normal = SubResource("StyleBoxEmpty_3tngg")
+text = "Wait..........."
+
+[connection signal="button_down" from="VBoxContainer/StartButton" to="." method="_on_start_button_button_down"]
+[connection signal="mouse_entered" from="VBoxContainer/StartButton" to="." method="mouse_entered"]
+[connection signal="button_down" from="VBoxContainer/OptionsButton" to="." method="_on_options_button_button_down"]
+[connection signal="mouse_entered" from="VBoxContainer/OptionsButton" to="." method="mouse_entered"]
+[connection signal="button_down" from="VBoxContainer/QuitButton" to="." method="_on_quit_button_button_down"]
+[connection signal="mouse_entered" from="VBoxContainer/QuitButton" to="." method="mouse_entered"]
