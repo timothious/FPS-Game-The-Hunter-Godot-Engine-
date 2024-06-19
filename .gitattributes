@@ -1,2 +1,3 @@
 # Normalize EOL for all files that Git considers text files.
 * text=auto eol=lf
+F:/portfolio/Games/FPS-Game-The-Hunter-Godot-Engine-/scenes/level1.tscn filter=lfs diff=lfs merge=lfs -text
