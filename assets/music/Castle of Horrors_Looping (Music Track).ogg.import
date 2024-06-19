@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://b2u3trwrxm2lt"
+path="res://.godot/imported/Castle of Horrors_Looping (Music Track).ogg-b212028104172728fe2a2c5d792aad3b.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/music/Castle of Horrors_Looping (Music Track).ogg"
+dest_files=["res://.godot/imported/Castle of Horrors_Looping (Music Track).ogg-b212028104172728fe2a2c5d792aad3b.oggvorbisstr"]
+
+[params]
+
+loop=true
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4

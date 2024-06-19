@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bubaarbqydx8y"
+path="res://.godot/imported/Arrival (Free Music Track).ogg-56a9cbab0bdce31dd897295a3a5aadc6.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/music/Arrival (Free Music Track).ogg"
+dest_files=["res://.godot/imported/Arrival (Free Music Track).ogg-56a9cbab0bdce31dd897295a3a5aadc6.oggvorbisstr"]
+
+[params]
+
+loop=true
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4
