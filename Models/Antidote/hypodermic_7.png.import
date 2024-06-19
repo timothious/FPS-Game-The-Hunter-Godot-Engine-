@@ -1,0 +1,38 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://wow0bcagu6v"
+path.s3tc="res://.godot/imported/hypodermic_7.png-7e1d51bc88bdedc4fac78aeefc9c48c0.s3tc.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+generator_parameters={
+"md5": "39dfde507cf2d55c244845fe51532569"
+}
+
+[deps]
+
+source_file="res://Models/Antidote/hypodermic_7.png"
+dest_files=["res://.godot/imported/hypodermic_7.png-7e1d51bc88bdedc4fac78aeefc9c48c0.s3tc.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=8
+roughness/src_normal="res://Models/Antidote/hypodermic_9.png"
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0
