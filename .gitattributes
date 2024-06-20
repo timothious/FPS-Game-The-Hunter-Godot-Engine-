@@ -1,3 +1,4 @@
 # Normalize EOL for all files that Git considers text files.
 *.csharp linguist-detectable=true  
-F:/portfolio/Games/FPS-Game-The-Hunter-Godot-Engine-/scenes/level1.tscn filter=lfs diff=lfs merge=lfs -text
+scenes/level1.tscn filter=lfs diff=lfs merge=lfs -text
+
